@@ -1,0 +1,145 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
+
+body {
+    font-family: "Rubik", sans-serif;
+    padding: 0 2%;
+    background-color: rgb(95, 157, 178);
+    }
+    
+    /* :root {
+        --main-color: #ecf0f1;
+        --point-color: #555;
+        --size: 5px;
+    }
+    
+    .loader {
+        background-color: var(--main-color);
+        overflow: hidden;
+        width: 100%;
+        height: 100%;
+        position: fixed;
+        top: 0;
+        left: 0;
+        display: flex;
+        align-items: center;
+        align-content: center;
+        justify-content: center;
+        z-index: 100000;
+    }
+    
+    .loader__element {
+        border-radius: 100%;
+        border: var(--size) solid var(--point-color);
+        margin: calc(var(--size)*2);
+    }
+    
+    .loader__element:nth-child(1) {
+        animation: preloader .6s ease-in-out alternate infinite;
+    }
+    
+    .loader__element:nth-child(2) {
+        animation: preloader .6s ease-in-out alternate .2s infinite;
+    }
+    
+    .loader__element:nth-child(3) {
+        animation: preloader .6s ease-in-out alternate .4s infinite;
+    }
+    body > section > div .hide{
+        display: none;
+    }
+    
+    @keyframes preloader {
+        100% {
+            transform: scale(2);
+        }
+    } */
+nav {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    position: sticky;
+    top: 0;
+    border-radius: 20px;
+}
+
+nav .profile {
+    display: flex;
+    align-items: center;
+}
+body>nav>div>img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50px;
+}
+
+nav .profile h1 {
+    margin-left: 10px;
+    font-size: 25px;
+}
+
+nav ul {
+    display: flex;
+    list-style-type: none;
+}
+
+nav ul li {
+    margin-left: 100px;
+    cursor: pointer;
+    border-bottom: 1px solid white;
+    justify-content: space-around;
+}
+nav ul li:hover{
+    font-size: 30px;
+    }
+.page-content{
+    margin: 4%;
+}
+.page-content header{
+    margin-top: 5%;
+    max-width: 80%;
+}
+.page-content header h1{
+    margin: 0;
+    text-transform: uppercase;
+    font-size: 6vw;
+}
+.page-content header p{
+    line-height: 30px;
+    font-size: x-large;
+    color: rgb(0, 0, 0);
+}
+.page-content .presentation-image{
+    margin-top: 5%;
+
+}
+.page-content .presentation-image img{
+    width: 100%;
+    height: auto;
+}
+
+
+footer{
+margin-top: 5%;
+display: flex;
+flex-wrap: wrap;
+justify-content: space-around;
+background-color: black;
+color: white;
+padding: 10px;
+}
+
+
+@media screen and (max-width: 680px){
+    nav{
+        justify-content: center;
+    }
+    nav ul {
+        display: none;
+    }
+    .page-content header{
+        margin-top: 10%;
+        max-width: 100%;
+    }
+}
