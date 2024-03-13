@@ -1,10 +1,109 @@
 @import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
 
+* {
+    box-sizing: border-box;
+}
+
+.timeline {
+    position: relative;
+    width: 100%;
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 40px 60px;
+    background: black;
+}
+
+.timeline:after {
+    content: "";
+    position: absolute;
+    top: 20px;
+    bottom: 20px;
+    left: 50%;
+    width: 8px;
+    background: rgb(255, 255, 255);
+    border-radius: 3px;
+    z-index: 1;
+}
+
+.timeline article {
+    position: relative;
+    background: #2b2b2b;
+    width: calc(50% - 40px);
+    padding: 15px;
+}
+
+.timeline article+article {
+    margin-top: 20px;
+}
+
+.timeline article:before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    left: calc(100% + 26px);
+    background: black;
+    width: 24px;
+    height: 24px;
+    border: 6px #ffffff solid;
+    border-radius: 50%;
+    z-index: 2;
+}
+
+.timeline article:after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 100%;
+    width: 0;
+    height: 0;
+    border-top: 20px solid transparent;
+    border-left: 16px solid rgb(255, 255, 255);
+    border-bottom: 20px solid transparent;
+}
+
+.timeline article:nth-child(even) {
+    margin-left: calc(50% + 48px);
+}
+
+.timeline article:nth-child(even):before {
+    left: auto;
+    right: calc(100% + 26px);
+}
+
+.timeline article:nth-child(even):after {
+    left: auto;
+    right: 100%;
+    border-left: none;
+    border-right: 16px solid rgb(255, 255, 255);
+}
+
+.timeline article ul {
+    margin: 0;
+    padding: 0;
+}
+
+.timeline article li {
+    list-style: none;
+    padding: 8px 0;
+    color: rgb(255, 255, 255);
+}
+
+.timeline article li:not(:last-child) {
+    border-bottom: 1px rgb(0, 0, 0);
+}
+
+.timeline article li span {
+    display: inline-block;
+    width: 70px;
+    color: #ffffff;
+}
+
 body {
     font-family: "Rubik", sans-serif;
     padding: 0 2%;
-    background-color: rgb(95, 157, 178);
 }
+
 nav {
     display: flex;
     flex-wrap: wrap;
@@ -25,6 +124,8 @@ body>nav>div>img {
     width: 80px;
     height: 80px;
     border-radius: 50px;
+    position: absolute;
+    position: relative;
 }
 
 nav .profile h1 {
@@ -43,48 +144,248 @@ nav ul li {
     border-bottom: 1px solid white;
     justify-content: space-around;
 }
-nav ul li:hover{
-    font-size: 30px;
-    }
 
-    header{
-    margin-top: 50px;
-    margin-bottom: 50px;
-    margin-left:40% ;
-    margin-right:40% ;
-    }
-.portrait img{
-    height: 400px ;
-    width: 300px ;
+nav ul li:hover {
+    font-size: 30px;
 }
 
-#containerLeft, #containerRight{
+header {
+    margin-top: 50px;
+    margin-bottom: 50px;
+    margin-left: 40%;
+    margin-right: 40%;
+    position: relative;
+    color: white;
+}
+
+nav ul a {
+    color: black;
+}
+
+.portrait img {
+    height: 400px;
+    width: 300px;
+    position: relative;
+}
+
+#containerLeft,
+#containerRight {
     flex-direction: column;
     align-items: center;
     margin-left: auto;
     margin-right: auto;
 }
 
-.container{
+.container {
     text-align: center;
     align-items: center;
-    margin-top: 50px;
+    position: relative;
 }
 
-.section{
+.section {
     display: flex;
+    color: aliceblue;
+    position: relative;
+    margin-left: 200px;
+    margin-right: 200px;
 }
 
-
-@media screen and (max-width: 680px){
-    nav{
-        justify-content: center;
+@keyframes move-background {
+    from {
+        -webkit-transform: translate3d(0px, 0px, 0px);
     }
-    nav ul {
+
+    to {
+        -webkit-transform: translate3d(1000px, 0px, 0px);
+    }
+}
+
+@-webkit-keyframes move-background {
+    from {
+        -webkit-transform: translate3d(0px, 0px, 0px);
+    }
+
+    to {
+        -webkit-transform: translate3d(1000px, 0px, 0px);
+    }
+}
+
+@-moz-keyframes move-background {
+    from {
+        -webkit-transform: translate3d(0px, 0px, 0px);
+    }
+
+    to {
+        -webkit-transform: translate3d(1000px, 0px, 0px);
+    }
+}
+
+@-webkit-keyframes move-background {
+    from {
+        -webkit-transform: translate3d(0px, 0px, 0px);
+    }
+
+    to {
+        -webkit-transform: translate3d(1000px, 0px, 0px);
+    }
+}
+
+.background-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+}
+
+.stars {
+    background: black url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/1231630/stars.png) repeat;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    display: block;
+    z-index: 0;
+}
+
+.twinkling {
+    width: 10000px;
+    height: 100%;
+    background: transparent url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/1231630/twinkling.png") repeat;
+    background-size: 1000px 1000px;
+    position: absolute;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    z-index: 2;
+    -moz-animation: move-background 70s linear infinite;
+    -ms-animation: move-background 70s linear infinite;
+    -o-animation: move-background 70s linear infinite;
+    -webkit-animation: move-background 70s linear infinite;
+    animation: move-background 70s linear infinite;
+
+}
+
+.clouds {
+    width: 10000px;
+    height: 100%;
+    background: transparent url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/1231630/clouds_repeat.png") repeat;
+    background-size: 1000px 1000px;
+    position: absolute;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    z-index: 3;
+    -moz-animation: move-background 150s linear infinite;
+    -ms-animation: move-background 150s linear infinite;
+    -o-animation: move-background 150s linear infinite;
+    -webkit-animation: move-background 150s linear infinite;
+    animation: move-background 150s linear infinite;
+}
+
+.animationBack .background-container img {
+    height: 70vh;
+    width: 70vh;
+    position: absolute;
+    z-index: 3;
+    right: 20px;
+}
+
+@media screen and (max-width: 680px) {
+    nav {
+        position: sticky;
+        border-radius: 20px;
+        text-align: center;
+    }
+
+    nav .profile h1 {
+        font-size: 7vw;
+        padding: 0;
+        margin: 0;
+    }
+
+    nav .profile img {
         display: none;
     }
-    .page-content header{
-        margin-top: 10%;
-        max-width: 100%;
+
+    nav ul {
+        display: flex;
+        list-style-type: none;
+        margin: auto;
+        text-align: center;
+        padding: 0;
     }
+
+    nav ul li {
+        flex-wrap: wrap;
+        cursor: pointer;
+        border-bottom: 1px solid white;
+        font-size: 15px;
+        margin: auto;
+        margin-left: 5px;
+    }
+
+    nav ul a {
+        text-align: center;
+        margin: auto;
+        color: black;
+    }
+
+    .section {
+        display: flex;
+        flex-direction: column;
+        margin: 0;
+    }
+
+    body>header>div {
+        margin: auto;
+        width: 100%;
+    }
+
+    .portrait {
+        text-align: center;
+    }
+
+    header {
+        margin: auto;
+        margin-top: 10px;
+    }
+
+    header .portrait img {
+        height: 190px;
+        width: 150px;
+        position: relative;
+    }
+
+    header .portrait h1 {
+        position: relative;
+    }
+
+    #containerLeft,
+    #containerRight {
+        margin-top: 0;
+    }
+
+    #containerLeft .container,
+    #containerRight .container {
+        margin: 10px;
+    }
+
+    #containerLeft .container p,
+    #containerRight .container p {
+        margin: 5px;
+    }
+    body > div.section > div.timeline > article > h2{
+        width: 100%;
+        margin: 0;
+        padding: 0;
+    }
+    body > div.section > div.timeline{
+        padding: 0;
+    }
+    body > div.section > div.timeline > article > h2{
+        font-size :4vw ;
+    }
+    
 }

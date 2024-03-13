@@ -1,4 +1,4 @@
-// setTimeout(function() {
-//     document.querySelector('.loader').classList.add('hide');
-// }, 10000);
+setTimeout(function() {
+    document.querySelector('.loader').classList.add('hide');
+},5000);
 
