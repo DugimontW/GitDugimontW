@@ -113,6 +113,7 @@ nav {
     position: sticky;
     top: 0;
     border-radius: 20px;
+    z-index: 3;
 }
 
 nav .profile {
@@ -120,7 +121,7 @@ nav .profile {
     align-items: center;
 }
 
-body>nav>div>img {
+nav div img {
     width: 80px;
     height: 80px;
     border-radius: 50px;
@@ -149,6 +150,10 @@ nav ul li:hover {
     font-size: 30px;
 }
 
+#telecharger {
+    color: white;
+}
+
 header {
     margin-top: 50px;
     margin-bottom: 50px;
@@ -156,16 +161,22 @@ header {
     margin-right: 40%;
     position: relative;
     color: white;
+    z-index: 2;
 }
 
 nav ul a {
     color: black;
 }
 
+.portrait {
+    text-align: center;
+}
+
 .portrait img {
     height: 400px;
     width: 300px;
     position: relative;
+    border-radius: 20px;
 }
 
 #containerLeft,
@@ -182,12 +193,23 @@ nav ul a {
     position: relative;
 }
 
+footer {
+    display: flex;
+    justify-content: space-around;
+    background-color: rgb(43, 42, 42);
+    color: white;
+    position: relative;
+    border-radius: 30px;
+    margin-top: 7%;
+}
+
 .section {
     display: flex;
     color: aliceblue;
     position: relative;
     margin-left: 200px;
     margin-right: 200px;
+    z-index: 2;
 }
 
 @keyframes move-background {
@@ -362,6 +384,7 @@ nav ul a {
         position: relative;
     }
 
+
     #containerLeft,
     #containerRight {
         margin-top: 0;
@@ -376,16 +399,26 @@ nav ul a {
     #containerRight .container p {
         margin: 5px;
     }
-    body > div.section > div.timeline > article > h2{
+
+    body>div.section>div.timeline>article>h2 {
         width: 100%;
         margin: 0;
         padding: 0;
+        text-align: center;
+        font-size: 4vw;
     }
-    body > div.section > div.timeline{
+
+    body>div.section>div.timeline {
+        padding: 0;
+        margin-top: 20px;
+    }
+
+    body>div.section>div.timeline>article>ul {
+        text-align: center;
+    }
+
+    .section footer {
+        margin-top: 30%;
         padding: 0;
     }
-    body > div.section > div.timeline > article > h2{
-        font-size :4vw ;
-    }
-    
 }

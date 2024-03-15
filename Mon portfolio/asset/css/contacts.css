@@ -15,6 +15,7 @@ nav {
     position: sticky;
     top: 0;
     border-radius: 20px;
+    z-index: 3;
 }
 
 nav .profile {
@@ -50,14 +51,16 @@ nav ul li:hover {
 }
 
 img {
-    width: 150px;
-    height: 150px;
+    width: 80px;
+    height: 80px;
 }
 
-body > div.section > div.title > h1{
+body>div.section>div.title>h1 {
     color: aliceblue;
     margin-top: 100px;
+    font-size: 3vw;
 }
+
 #emailLogo {
     border-radius: 13px;
 }
@@ -72,7 +75,7 @@ p {
 }
 
 h4 {
-    font-size: 2vw;
+    font-size: 1.5vw;
     color: aliceblue;
 }
 
@@ -89,17 +92,27 @@ h4 {
     margin-left: 20%;
     margin-right: 20%;
     position: relative;
+    z-index: 2;
 }
 
-.container h1 {
-    text-align: center;
-    margin-top: 50px;
-    font-size: 4vw;
+footer {
+    display: flex;
+    justify-content: space-around;
+    background-color: rgb(43, 42, 42);
+    color: white;
+    position: relative;
+    border-radius: 30px;
+    margin-top: 13%;
+}
+
+body>footer>div>p {
+    font-size: 1vw;
 }
 
 .section div h1 {
     text-align: center;
     font-size: 4vw;
+    margin-top: 50px;
 }
 
 @keyframes move-background {
@@ -210,10 +223,11 @@ h4 {
         position: sticky;
         border-radius: 20px;
         text-align: center;
+        z-index: 3;
     }
 
     nav .profile h1 {
-        font-size: 7vw;
+        font-size: 9vw;
         padding: 0;
         margin: 0;
     }
@@ -252,17 +266,42 @@ h4 {
         margin-top: 20px;
     }
 
-    .container h4,
-    p {
-        font-size: 20px;
+    .container h4 {
+        margin: 0;
+        font-size: 4vw;
     }
 
-    .section div h1 {
-        font-size: 40px;
+    .container h4,
+    p {
+        font-size: 15px;
+        margin: 0;
+    }
+
+    .section {
+        margin: 5%;
+        margin-top: 20%;
+    }
+
+    body>div.section>div.title>h1 {
+        font-size: 6vw;
+        margin-top: 10%;
+        margin-bottom: 0;
     }
 
     img {
-        width: 80px;
-        height: 80px;
+        width: 50px;
+        height: 50px;
+    }
+
+    footer {
+        margin-top: 24%;
+        padding: 0%;
+        height: 40px;
+    }
+
+    footer .colonne p {
+        font-size: 4vw;
+        margin-top: 10px;
+        margin-bottom: 10px;
     }
 }

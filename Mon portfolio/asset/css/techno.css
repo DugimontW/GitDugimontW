@@ -69,16 +69,28 @@ nav ul a {
     position: relative;
 }
 
+footer {
+    display: flex;
+    justify-content: space-around;
+    background-color: rgb(43, 42, 42);
+    color: white;
+    position: relative;
+    border-radius: 30px;
+    line-height: 7px;
+    margin-top: 9%;
+}
+
 .container img {
     height: 150px;
     width: 150px;
     border-radius: 25px;
+    opacity: 0.4;
     transition: opacity 0.3s ease;
 }
 
 .container img:hover {
     cursor: pointer;
-    opacity: 0.5;
+    opacity: 1;
 }
 
 .section {
@@ -86,6 +98,7 @@ nav ul a {
     margin-right: 150px;
     text-align: center;
     position: relative;
+    margin-bottom: 8%;
 }
 
 @keyframes move-background {
@@ -195,10 +208,11 @@ nav ul a {
         position: sticky;
         border-radius: 20px;
         text-align: center;
+        z-index: 3;
     }
 
     nav .profile h1 {
-        font-size: 7vw;
+        font-size: 9vw;
         padding: 0;
         margin: 0;
     }
@@ -238,5 +252,10 @@ nav ul a {
     .container img {
         height: 90px;
         width: 90px;
+    }
+
+    footer {
+        margin-top: 30%;
+        padding: 0;
     }
 }

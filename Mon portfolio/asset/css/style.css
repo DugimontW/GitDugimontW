@@ -63,6 +63,7 @@ nav {
     position: sticky;
     top: 0;
     border-radius: 20px;
+    z-index: 3;
 }
 
 nav .profile {
@@ -70,7 +71,7 @@ nav .profile {
     align-items: center;
 }
 
-body>nav>div>img {
+body nav div img {
     width: 80px;
     height: 80px;
     border-radius: 50px;
@@ -85,9 +86,11 @@ nav ul {
     display: flex;
     list-style-type: none;
 }
-nav ul a{
+
+nav ul a {
     color: black;
 }
+
 nav ul li {
     margin-left: 70px;
     cursor: pointer;
@@ -114,7 +117,7 @@ nav ul li:hover {
     font-size: 3vw;
     text-align: center;
     margin-bottom: 4%;
-    margin-top: 5%;
+    margin-top: 8%;
 }
 
 .page-content header p {
@@ -122,7 +125,7 @@ nav ul li:hover {
     font-size: 1.3vw;
     color: white;
     margin: auto;
-    width: 45%;
+    width: 40%;
     justify-content: space-between;
     line-height: 40px;
 }
@@ -132,9 +135,9 @@ footer {
     justify-content: space-around;
     background-color: rgb(43, 42, 42);
     color: white;
-    padding: 20px;
     position: relative;
     border-radius: 30px;
+    margin-top: 10%;
 }
 
 @keyframes move-background {
@@ -252,6 +255,10 @@ img {
         margin: 0;
     }
 
+    nav .profile img {
+        display: none;
+    }
+
     nav ul {
         display: flex;
         list-style-type: none;
@@ -305,4 +312,5 @@ img {
         margin-top: 30%;
         padding: 0%;
     }
+
 }

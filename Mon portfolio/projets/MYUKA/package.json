@@ -1,7 +1,0 @@
-{
-  "dependencies": {
-    "@angular/cli": "^17.2.3",
-    "bootstrap": "^5.3.3",
-    "g": "^2.0.1"
-  }
-}
